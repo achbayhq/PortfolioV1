@@ -50,25 +50,22 @@ export default function TechStack() {
 
 const techCategories = [
   {
-    title: "Frontend",
-    description: "Frameworks and libraries for building interactive user interfaces.",
+    title: "Mobile Dev",
+    description: "Frameworks and libraries for building clean architecture project.",
     technologies: [
-      { name: "React.js", svg: "./icons/react.svg" },
-      { name: "Next.js", svg: "./icons/nextjs.svg" },
-      { name: "Tailwind CSS", svg: "./icons/tailwindcss.svg" },
-      { name: "HTML5", svg: "./icons/html.svg" },
-      { name: "CSS3", svg: "./icons/css.svg" },
-      { name: "Framer Motion", svg: "./icons/framermotion.svg" },
+      { name: "Flutter", svg: "./icons/flutter.svg" },
+      { name: "Dart", svg: "./icons/dart.svg" },
+      { name: "Kotlin", svg: "./icons/kotlin.svg" },
+      { name: "BLoC", svg: "./icons/bloc.svg" },
+      { name: "Riverpod", svg: "./icons/riverpod.svg" },
     ],
   },
   {
-    title: "Backend",
+    title: "Frontend",
     description: "Server-side technologies and frameworks.",
     technologies: [
-      { name: "Node.js", svg: "./icons/nodejs.svg" },
-      { name: "Express.js", svg: "./icons/express.svg" },
-      { name: "Go (Golang)", svg: "./icons/go.svg" },
-      { name: "Fiber", svg: "./icons/fiber.svg" },
+      { name: "Next.js", svg: "./icons/nextjs.svg" },
+      { name: "Tailwind CSS", svg: "./icons/tailwindcss.svg" },
       { name: "Laravel", svg: "./icons/laravel.svg" },
     ],
   },
@@ -78,20 +75,18 @@ const techCategories = [
     technologies: [
       { name: "MySQL", svg: "./icons/mysql.svg" },
       { name: "PostgreSQL", svg: "./icons/postgresql.svg" },
-      { name: "MongoDB", svg: "./icons/mongodb.svg" },
-      { name: "Prisma ORM", svg: "./icons/prisma.svg" },
     ],
   },
   {
     title: "Tools & Infrastructure",
     description: "Development tools, version control, and deployment.",
     technologies: [
+      { name: "Android Studio", svg: "./icons/androidstudio.svg" },
+      { name: "VS Code", svg: "./icons/vscode.svg" },
+      { name: "Antigravity", svg: "./icons/antigravity.svg" },
       { name: "Git", svg: "./icons/git.svg" },
       { name: "GitHub", svg: "./icons/github.svg" },
-      { name: "Docker", svg: "./icons/docker.svg" },
-      { name: "Linux", svg: "./icons/linux.svg" },
-      { name: "Nginx", svg: "./icons/nginx.svg" },
-      { name: "Postman", svg: "./icons/postman.svg" },
+      { name: "Bruno", svg: "./icons/bruno.svg" },
     ],
   },
 ]

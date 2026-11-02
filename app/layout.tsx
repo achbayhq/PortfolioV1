@@ -10,37 +10,37 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://ryhar.my.id"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://achbayhaqipa.my.id"),
   title: {
-    default: "RyHar | Portfolio",
-    template: "%s | RyHar Portfolio",
+    default: "Bayhaqi | Portfolio",
+    template: "%s | Bayhaqi Portfolio",
   },
-  description: "Personal portfolio of RyHar. Software Developer specializing in Next.js, Node.js, and modern web development.",
-  keywords: ["RyHar", "Portfolio", "Software Developer", "Web Development", "Backend", "Frontend", "Next.js", "React", "Node.js"],
-  authors: [{ name: "RyHar" }],
-  creator: "RyHar",
+  description: "Personal portfolio of Achmad Bayhaqi Putra Adira. Mobile Developer specializing in Flutter, Kotlin, and Web Development with Laravel and Next.Js.",
+  keywords: ["Bayhaqi", "Portfolio", "Software Developer", "Mobile Developer", "Android Developer", "Flutter", "Kotlin", "Frontend", "React", "Next.js"],
+  authors: [{ name: "Bayhaqi" }],
+  creator: "Bayhaqi",
   openGraph: {
     type: "website",
     locale: "id_ID",
     url: "/",
-    title: "RyHar | Portfolio",
-    description: "Personal portfolio of RyHar. Software Developer specializing in Next.js, Node.js, and modern web development.",
-    siteName: "RyHar Portfolio",
+    title: "Bayhaqi | Portfolio",
+    description: "Personal portfolio of Achmad Bayhaqi Putra Adira. Mobile Developer focused in Flutter, Kotlin, and Web Development with Laravel dan Next.Js.",
+    siteName: "Bayhaqi Portfolio",
     images: [
       {
         url: "/images/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "RyHar Portfolio",
+        alt: "Bayhaqi Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "RyHar | Portfolio",
-    description: "Personal portfolio of RyHar. Software Developer specializing in Next.js, Node.js, and modern web development.",
+    title: "Bayhaqi | Portfolio",
+    description: "Personal portfolio of Achmad Bayhaqi Putra Adira. Mobile Developer specializing in Flutter, Kotlin, and Web Development with Laravel dan Next.Js.",
     images: ["/images/hero.jpg"],
-    creator: "@RyHar",
+    creator: "@Bayhaqi",
   },
   icons: {
     icon: "/images/hero.jpg",

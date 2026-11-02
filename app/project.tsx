@@ -67,12 +67,6 @@ export default function Project() {
                       View Details
                       <span className="w-8 h-[2px] bg-text-primary group-hover/btn:w-12 transition-all duration-300"></span>
                     </button>
-
-                    <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="p-2 border border-text-secondary/20 rounded-full text-text-secondary hover:text-background hover:bg-text-primary hover:border-text-primary transition-all duration-300">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
                   </div>
                 </div>
               </GlareHover>
@@ -116,12 +110,6 @@ export default function Project() {
                           View Details
                           <span className="w-8 h-[2px] bg-text-primary group-hover/btn:w-12 transition-all duration-300"></span>
                         </button>
-
-                        <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="p-2 border border-text-secondary/20 rounded-full text-text-secondary hover:text-background hover:bg-text-primary hover:border-text-primary transition-all duration-300">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
                       </div>
                     </div>
                   </GlareHover>
@@ -162,12 +150,6 @@ export default function Project() {
                           View Details
                           <span className="w-8 h-[2px] bg-text-primary group-hover/btn:w-12 transition-all duration-300"></span>
                         </button>
-
-                        <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="p-2 border border-text-secondary/20 rounded-full text-text-secondary hover:text-background hover:bg-text-primary hover:border-text-primary transition-all duration-300">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
                       </div>
                     </div>
                   </GlareHover>
@@ -179,7 +161,7 @@ export default function Project() {
 
         <FadeUp>
           <div className="mt-16 flex justify-center w-full px-6">
-            <a href="https://github.com/RyHarJr" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-background border border-text-secondary/20 text-text-primary hover:border-text-primary hover:bg-text-primary hover:text-background rounded-xl font-bold tracking-widest text-sm uppercase transition-all duration-300 ease-out group hover:-translate-y-1.5 hover:scale-[1.02] shadow-sm hover:shadow-xl">
+            <a href="https://github.com/achbayhq" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-background border border-text-secondary/20 text-text-primary hover:border-text-primary hover:bg-text-primary hover:text-background rounded-xl font-bold tracking-widest text-sm uppercase transition-all duration-300 ease-out group hover:-translate-y-1.5 hover:scale-[1.02] shadow-sm hover:shadow-xl">
               <span>View More Project</span>
               <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -208,7 +190,11 @@ export default function Project() {
 
                 {/* Modal Content */}
                 <div className="p-6 md:p-8 overflow-y-auto flex-grow custom-scrollbar">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10 pb-8 border-b border-text-secondary/10">
+                    <div>
+                      <span className="text-xs font-bold tracking-widest text-text-secondary uppercase block mb-5">Description</span>
+                      <span className="text-sm font-bold text-text-primary uppercase tracking-wide">{activeProject.longDescription}</span>
+                    </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10 pb-8 pt-8 border-b border-text-secondary/10">
                     <div>
                       <span className="text-xs font-bold tracking-widest text-text-secondary uppercase block mb-3">Created</span>
                       <span className="text-sm font-bold bg-thirdary text-text-primary px-3 py-1.5 rounded-lg border border-text-secondary/10">{activeProject.createdAt}</span>
@@ -224,37 +210,6 @@ export default function Project() {
                       </div>
                     </div>
                   </div>
-
-                  <div>
-                    <span className="text-xs font-bold tracking-widest text-text-secondary uppercase block mb-5">Key Features</span>
-                    <ul className="space-y-4">
-                      {activeProject.features.map((feature, i) => (
-                        <li key={i} className="flex items-center bg-thirdary/50 p-4 rounded-xl border border-text-secondary/5">
-                          <span className="text-text-primary mr-3 font-black">&rarr;</span>
-                          <span className="text-sm font-bold text-text-primary uppercase tracking-wide">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Modal Footer */}
-                <div className="p-6 border-t border-text-secondary/10 flex flex-col sm:flex-row gap-4 bg-background">
-                  <a href={activeProject.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 text-center font-bold text-sm tracking-widest uppercase bg-text-primary text-background py-4 rounded-xl hover:-translate-y-1 transition-transform duration-300">
-                    Live Demo
-                  </a>
-                  {activeProject.isPrivateRepo ? (
-                    <button disabled className="flex-1 flex justify-center items-center gap-2 text-center font-bold text-sm tracking-widest uppercase border-2 border-text-secondary/20 text-text-secondary opacity-50 cursor-not-allowed py-4 rounded-xl">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                      </svg>
-                      Source Code
-                    </button>
-                  ) : (
-                    <a href={activeProject.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex justify-center items-center gap-2 text-center font-bold text-sm tracking-widest uppercase border-2 border-text-secondary/20 text-text-primary hover:border-text-primary hover:-translate-y-1 transition-all duration-300 py-4 rounded-xl">
-                      Source Code
-                    </a>
-                  )}
                 </div>
               </motion.div>
             </div>
@@ -268,50 +223,38 @@ export default function Project() {
 const projectList = [
   {
     index: 0,
-    imagePath: "/images/jadibotwa.jpeg",
-    title: "JadibotWA",
-    shortDescription: "Architected a code-free WhatsApp automation platform featuring live bot logs via WebSockets for real-time data, status monitoring, and scalable REST APIs.",
-    createdAt: "2025-05-10",
-    features: ["Live Bot Logs via WebSockets", "High-performance Microservices", "Multi-device Session Management", "AI-powered Chat Workflows"],
-    tech: ["Go (Fiber)", "PostgreSQL", "WhatsMeow", "Next.js", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/RyHarJr",
-    liveDemoUrl: "https://jadibotwa.xyz",
-    isPrivateRepo: true,
+    imagePath: "/images/deteksimicrosleep.jpg",
+    title: "Deteksi Microsleep",
+    shortDescription: "Sistem deteksi microsleep real-time berbasis Edge Computing menggunakan mikrokontroler ESP32 dan model SVM.",
+    longDescription: "Mengembangkan sistem deteksi microsleep berbasis Edge Computing sebagai proyek tugas akhir (skripsi). Proyek ini mengintegrasikan embedded system menggunakan mikrokontroler ESP32 dengan model Machine Learning Support Vector Machine (SVM) untuk mengklasifikasi kondisi microsleep secara real-time langsung pada perangkat dengan latensi rendah.",
+    createdAt: "2026-01-18",
+    tech: ["Python", "C++"],
   },
   {
     index: 1,
-    imagePath: "/images/ryharpanel.jpeg",
-    title: "RyHar Panel",
-    shortDescription: "Built a modern landing page and management platform for a Pterodactyl hosting service, focused on fast, responsive, and conversion-driven user experience.",
-    createdAt: "2025-08-05",
-    features: ["Pterodactyl Integration", "Automated Transaction Processing", "Payment Gateway", "SEO Optimization"],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Express.js", "Prisma ORM", "MySQL"],
-    githubUrl: "https://github.com/RyHarJr",
-    liveDemoUrl: "https://ryhar-panel.my.id",
-    isPrivateRepo: true,
+    imagePath: "/images/posacc.png",
+    title: "POS Accounting+",
+    shortDescription: "Modul aplikasi mobile Point-of-Sale (POS) berbasis Flutter yang terintegrasi langsung dengan sistem ERP Accounting+.",
+    longDescription: "Mengembangkan aplikasi mobile Point-of-Sale (POS) menggunakan Flutter, Dart, dan arsitektur BLoC sebagai modul integrasi inti untuk ekosistem ERP Accounting+. Aplikasi ini memfasilitasi pemrosesan transaksi yang cepat dengan fitur komprehensif, mencakup otentikasi sistem yang aman, dasbor interaktif, katalog produk dinamis dengan pencarian lanjutan, serta pelacakan riwayat transaksi yang terstruktur.",
+    createdAt: "2025-08-11",
+    tech: ["Flutter", "Dart", "BLoC"],
   },
   {
     index: 2,
-    imagePath: "/images/portofolio.jpeg",
-    title: "RyHar Portfolio",
-    shortDescription: "Developed a personal portfolio website with a modern, responsive design focused on user experience to showcase profile, skills, and completed projects.",
-    createdAt: "2026-07-20",
-    features: ["Interactive Animations", "Responsive Design", "Modern UI/UX"],
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/RyHarJr/portofoliov2",
-    liveDemoUrl: "https://ryhar.my.id",
-    isPrivateRepo: false,
+    imagePath: "/images/kampsewa.png",
+    title: "Kampsewa",
+    shortDescription: "Platform mobile marketplace penyewaan alat outdoor berbasis Flutter untuk manajemen pemesanan dan transaksi.",
+    longDescription: 'Memimpin pengembangan "KampSewa" sebagai Project Manager dan Mobile Developer, sebuah platform marketplace yang menghubungkan komunitas outdoor dengan vendor penyewaan skala UMKM. Membangun aplikasi mobile menggunakan Flutter dengan mengimplementasikan fitur inti seperti pencarian produk, sistem booking, dan integrasi pembayaran yang aman. Selain menstrukturkan alur transaksi penyewaan—termasuk pelacakan pengambilan/pengembalian serta manajemen denda',
+    createdAt: "2025-03-08",
+    tech: ["Flutter", "Dart", "Riverpod"],
   },
   {
     index: 3,
-    imagePath: "/images/restapi.jpeg",
-    title: "RyHar REST API",
-    shortDescription: "Developed a scalable REST API with Node.js and Express.js, featuring JWT authentication, database integration, and comprehensive error handling.",
-    createdAt: "2026-07-20",
-    features: ["JWT Authentication", "Database Integration", "Comprehensive Error Handling"],
-    tech: ["Node.js", "Express.js", "Prisma ORM", "PostgreSQL"],
-    githubUrl: "https://github.com/RyHarJr",
-    liveDemoUrl: "https://dash.ryhar.my.id",
-    isPrivateRepo: true,
+    imagePath: "/images/sibrownies.png",
+    title: "SI-Brownies",
+    shortDescription: "Aplikasi mobile pre-order dan sistem POS untuk manajemen operasional mitra bisnis bakery lokal.",
+    longDescription: 'Memimpin tim pengembangan dalam membangun "SI-Brownies", sebuah sistem Point-of-Sale (POS) terintegrasi untuk mitra bisnis bakery lokal. Sistem ini mencakup aplikasi mobile berbasis Java yang memungkinkan pelanggan melakukan pre-order dengan penjadwalan pengambilan, serta dasbor web berbasis PHP dan MySQL untuk manajemen laporan, pemasok, dan inventaris toko. Selain mengawal eksekusi penyelesaian proyek, saya juga mengimplementasikan sistem autentikasi yang aman, merancang alur pemrosesan pesanan, dan melakukan optimasi basis data guna menjamin efisiensi penanganan transaksi maupun pemantauan stok.',
+    createdAt: "2023-07-12",
+    tech: ["kotlin", "php native"],
   },
 ]
